@@ -9,6 +9,7 @@ import * as tfvis from '@tensorflow/tfjs-vis'
 
 import dataRaw from '../../train.json';
 import dataModel from '../../my-model-1.json';
+import { sigmoid } from '@tensorflow/tfjs';
 
 
 function createModel() {
@@ -16,8 +17,8 @@ function createModel() {
     const model = tf.sequential(); 
     
     // Add a single input layer
-    model.add(tf.layers.dense({inputShape: [1], units: 1, useBias: true}));
-
+    model.add(tf.layers.dense({inputShape: [1], units: 1, useBias: true,}));
+    
     // Add an output layer
     model.add(tf.layers.dense({units: 1, useBias: true}));
   
@@ -67,8 +68,8 @@ function createModel() {
       metrics: ['mse'],
     });
     
-    const batchSize = 32;
-    const epochs = 1000;
+    const batchSize = 100;
+    const epochs = 500;
     
     return await model.fit(inputs, labels, {
       batchSize,

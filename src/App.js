@@ -1,7 +1,6 @@
 import React from "react";
 import { Grommet, Box, Text } from "grommet";
 
-
 import Car from "./features/Car/Car";
 
 import RangePredictor from "./features/Car/RangePredictor";

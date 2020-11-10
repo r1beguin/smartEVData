@@ -150,7 +150,7 @@ const Car = () => {
                     <Text size={size}>Stats</Text>
                     <Text size={size}>{data[index].model}</Text>
                </Box>
-                <Box fill  direction="row" align="center">
+                <Box gap="medium"  direction="row" align="center">
                     <Box align="center" gap="small" justify="center">
                         <Text size={size}>0 to 100km/h</Text>
                         <Stack anchor="center" >
@@ -160,7 +160,7 @@ const Car = () => {
                             </Box>
                         </Stack>
                     </Box>
-                    <Box align="center" gap="small">
+                    <Box align="center" gap="small"  justify="center">
                         <Text size={size}>Topspeed</Text>
                         <Stack anchor="center" >
                             <Meter size= "xsmall" thickness="small" type="circle" values={[{"value": (parseInt(data[index].topspeed.replace( /^\D+/g, ''))/410)*100 }]} />
@@ -169,7 +169,7 @@ const Car = () => {
                             </Box>
                         </Stack>
                     </Box>
-                    <Box align="center" gap="small">
+                    <Box align="center" gap="small"  justify="center">
                         <Text size={size}>Efficiency</Text>
                         <Stack anchor="center" >
                             <Meter size= "xsmall" thickness="small" type="circle" values={[{"value": (100/parseInt(data[index].efficiency.replace( /^\D+/g, '')))*100 }]} />

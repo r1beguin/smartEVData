@@ -256,13 +256,19 @@ const RangePredictor = () => {
             
             {/* <Button label="save" onClick={()=> setSave(true)} /> */}
 
-            <TextInput placeholder="Enter battery size"  onChange={e => setInput(parseInt(e.target.value))} />
+            <TextInput placeholder="Enter battery size (kwh)"  onChange={e => setInput(parseInt(e.target.value))} />
             <Button label="Predict" onClick={()=> setPredict(true)} />
             {output && (
                 <Text>{ output.toString().match(/^\d*/g)} km</Text>
             )}
             
+            {size==="small" ? (
             <Box height="medium"/>
+
+            ) : (
+              <Box height="xsmall"/>
+
+            )}
                    
         </Box>
     )

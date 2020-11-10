@@ -2,7 +2,7 @@ import React from 'react';
 
 import {Box, Button, Text, TextInput, ResponsiveContext} from "grommet";
 import { XAxis, YAxis, CartesianGrid,ScatterChart, Scatter, Legend, Tooltip, ResponsiveContainer} from "recharts";
-
+import {Github, Twitter} from "grommet-icons";
 import * as tf from '@tensorflow/tfjs';
 
 import * as tfvis from '@tensorflow/tfjs-vis'
@@ -269,7 +269,11 @@ const RangePredictor = () => {
               <Box height="xsmall"/>
 
             )}
-                   
+            <Box direction="row" justify="center" align="center" gap="small">
+            <Button icon={<Github />} target="_blank" onClick={() => window.open('https://github.com/r1beguin/smartevdata')} />       
+            <Button icon={<Twitter />} target="_blank" onClick={() => window.open('https://twitter.com/ErwanBeguin')} />       
+
+            </Box>
         </Box>
     )
 }
